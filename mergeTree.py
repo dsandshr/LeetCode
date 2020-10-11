@@ -6,12 +6,7 @@
 #         self.right = right
 
 class Solution(object):
-    def mergeTrees(self, t1, t2):
-        """
-        :type t1: TreeNode
-        :type t2: TreeNode
-        :rtype: TreeNode
-        """
+    def mergeTrees(self, t1: TreeNode, t2: TreeNode) -> TreeNode:
         if t1 or t2:
             new_tree = TreeNode((t1.val if t1 else 0) + (t2.val if t2 else 0))
         

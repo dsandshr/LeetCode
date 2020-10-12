@@ -11,8 +11,5 @@ class Solution:
             lDepth = self.maxDepth(root.left)
             rDepth = self.maxDepth(root.right)
             
-            if lDepth > rDepth:
-                return lDepth + 1
-            else:
-                return rDepth + 1
+            return max(lDepth, rDepth) + 1
         return 0

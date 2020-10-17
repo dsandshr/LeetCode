@@ -2,8 +2,8 @@ class Solution:
     def twoSum(self, nums, target):
         res = dict()
         
-        for i in range(len(nums)):
-            seeking = target - nums[i]
+        for i, num in enumerate(nums):
+            seeking = target - num
             if seeking in res:
-                return [i, res.get(seeking)]
-            res[nums[i]] = i
+                return [res[seeking], i]
+            res[num] = i

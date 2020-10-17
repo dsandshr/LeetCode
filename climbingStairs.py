@@ -1,12 +1,9 @@
 class Solution:
     def climbStairs(self, n):
-        if n == 1: return 1
+        if n == 1 or n == 0: return 1 if n == 1 else 0
         
-        fst = 1
-        scnd = 2
+        fst, scnd = 1, 1
         
-        for i in range(3, n + 1):
-            thrd = fst + scnd
-            fst = scnd
-            scnd = thrd
-        return scnd
+        for i in range(n):
+            fst, scnd = scnd, fst + scnd
+        return fst
